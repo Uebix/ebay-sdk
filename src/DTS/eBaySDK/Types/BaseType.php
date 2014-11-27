@@ -124,9 +124,9 @@ class BaseType
      *
      * @returns string The XML request string.
      */
-    public function toRequestXml()
+    public function toRequestXml($rootElement = true)
     {
-        return $this->toXml(self::$requestXmlRootElementNames[get_class($this)], true);
+        return $this->toXml(self::$requestXmlRootElementNames[get_class($this)], $rootElement);
     }
 
     /**
